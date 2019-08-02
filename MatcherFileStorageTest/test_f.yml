@@ -1,0 +1,13 @@
+%YAML:1.0
+---
+normType: 6
+trainDesc_0: !!opencv-matrix
+   rows: 0
+   cols: 0
+   dt: u
+   data: []
+trainDesc_1: !!opencv-matrix
+   rows: 0
+   cols: 0
+   dt: u
+   data: []
