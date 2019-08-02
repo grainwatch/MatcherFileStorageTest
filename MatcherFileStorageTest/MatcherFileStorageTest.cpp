@@ -8,7 +8,7 @@
 #include <opencv2/features2d.hpp>
 #include <string>
 
-void lol_write(std::string filename, cv::DescriptorMatcher* matcher, cv::NormTypes normType) {
+void write(std::string filename, cv::DescriptorMatcher* matcher, cv::NormTypes normType) {
 	cv::FileStorage* fs = new cv::FileStorage(filename, cv::FileStorage::WRITE);
 	std::vector<cv::Mat> trainDesc = matcher->getTrainDescriptors();
 	*fs << "normType" << normType;
@@ -38,7 +38,7 @@ int main()
 	decs->push_back(des1);
 	decs->push_back(des2);
 	bfMatcher->add(*decs);
-	lol_write("test_f.yml", bfMatcher.get(), cv::NormTypes::NORM_HAMMING);
+	write("test_f.yml", bfMatcher.get(), cv::NormTypes::NORM_HAMMING);
 }
 
 
